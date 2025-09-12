@@ -11,78 +11,69 @@ body {
 }
 
 header {
-  background: #F55A5A;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  height: 55px;
+  color: black;
+  height: 85px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header > img {
-  width: 24px;
+  width: 40px;
   margin-right: 7px;
 }
 
 header > h1 {
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 7px;
+  font-size: 1.5rem;
+  margin-top: 9px;
+  color: black;
 }
 
-article.journal-entry {
+.add-ingredient-form {
   display: flex;
-  margin-top: 20px;
-  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 8px; /* space between input and button */
 }
 
-article.journal-entry .marker {
-  width: 7px;
-  margin-right: 4px;
-}
-
-article.journal-entry .main-image-container {
-  width: 125px;
-  height: 168px;
-  overflow: hidden;
-  border-radius: 5px;
-  flex-shrink: 0;
-  margin-right: 19px;
-}
-
-article.journal-entry .main-image {
-  height: 100%;
+/* Input styling */
+.add-ingredient-form input {
   width: 100%;
-  object-fit: cover;
+  max-width: 320px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;   /* light border */
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
 }
 
-.info-container span.country {
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-right: 12px;
+.add-ingredient-form input:focus {
+  border-color: #999;       /* subtle focus effect */
 }
 
-.info-container a {
-  color: #2B283A;
-  font-size: 0.7rem;
+/* Button styling */
+.add-ingredient-form button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
 }
 
-.info-container a:visited {
-  color: #918E9B;
+.add-ingredient-form button:hover {
+  background-color: #333;   /* lighter hover */
 }
 
-.info-container h2.entry-title {
-  margin-top: 7px;
-  margin-bottom: 17px;
+/* Add the "+" before text */
+.add-ingredient-form button::before {
+  content: "+";
+  margin-right: 6px;
 }
-
-.info-container p.trip-dates {
-  font-weight: bold;
-  margin-bottom: 7px;
-}
-
-.info-container p.entry-text {
-  line-height: 1.5;
-  font-size: 0.8rem;
-  overflow: hidden;
-}
+  
